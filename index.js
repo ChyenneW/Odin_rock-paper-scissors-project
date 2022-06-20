@@ -8,4 +8,12 @@ function computerPlay() {
   console.log(playChoice);
 }
 
-computerPlay();
+// Takes players play selection
+function playersPlay() {
+  // prompt for selection
+  let playersChoice = prompt("Rock, Paper, or Scissors?")
+  // return player's choice and correct selection case size
+  console.log(playersChoice.toLowerCase());
+}
+
+
