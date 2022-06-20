@@ -25,18 +25,49 @@ function gameRound() {
   // take computerPlay and playersPlay
   let computer = computerPlay();
   let player = playersPlay();
+  let victor = ["computerWon", "playerWon", "tie"];
   console.log(computer);
   console.log(player);
 
-  // compare computerPlay and playersPlay
+  // Compare computerPlay and playersPlay
   if (computer === player) {
     alert("Its a tie!!");
+    return victor[2];
   } else if (computer === "rock" && player === "scissors" || computer === "paper" && player === "rock" || computer === "scissors" && player === "paper") {
     alert(`You lose! ${computer} beats ${player}.`);
+    return victor[0];
   } else {
     alert(`You win! ${player} beats ${computer}.`);
+    return victor[1];
   }
 }
 
+// Play 5 rounds of game
+function game() {
+  for (let index = 0; index < 5; index++) {
+    let victor = gameRound();
 
-gameRound();
+    // track winner for each round
+    let computerScore = 0;
+    let playerScore = 0;
+    if (victor === "computerWon") {
+      computerScore++;
+      console.log(computerScore);
+    } else if (victor === "playerWon") {
+      playerScore++;
+      console.log(playerScore);
+    }
+
+
+    // return total points
+
+
+    // incruments roun number
+    index;
+  }
+}
+
+game();
+// return winner
+
+
