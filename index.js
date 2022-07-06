@@ -1,6 +1,14 @@
-const computerChoice = document.getElementById('computer-choice');
-const UserChoice = document.getElementById('user-choice');
-const result = document.getElementById('result');
+const computerChoiceDisplay = document.getElementById('computer-choice');
+const userChoiceDispay = document.getElementById('user-choice');
+const result = document.getElementById('results');
+const possibleChoices = document.querySelectorAll('button');
+
+let userChoice
+
+possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
+  userChoice = e.target.id
+  userChoiceDispay.innerHTML = userChoice
+}))
 
 
 // Randomly Return either Rock Paper or Scissors
