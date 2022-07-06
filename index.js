@@ -1,3 +1,8 @@
+const computerChoice = document.getElementById('computer-choice');
+const UserChoice = document.getElementById('user-choice');
+const result = document.getElementById('result');
+
+
 // Randomly Return either Rock Paper or Scissors
 function computerPlay() {
   // define three options or one object? one array?
