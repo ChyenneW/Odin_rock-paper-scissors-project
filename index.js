@@ -13,7 +13,7 @@ function computerPlay() {
   // define three options or one object? one array?
   let playOptions = ["rock", "paper", "scissors"];
   // randomly return number between 1-3
-  let computerChoice = playOptions[Math.floor(Math.random() * 3)]
+  computerChoice = playOptions[Math.floor(Math.random() * 3)]
   // return computer's choice
   console.log(computerChoice);
   return computerChoice;
