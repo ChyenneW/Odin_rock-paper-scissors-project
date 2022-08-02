@@ -1,9 +1,8 @@
 const computerChoiceDisplay = document.getElementById('computer-choice');
 const userChoiceDispay = document.getElementById('user-choice');
 const result = document.getElementById('results');
+
 const possibleChoices = document.querySelectorAll('button');
-const computerScoreDisplay = document.getElementById('computer-score');
-const userScoreDispay = document.getElementById('player-score');
 
 let computerChoice;
 let playersChoice;
@@ -15,7 +14,6 @@ function computerPlay() {
   // randomly return number between 1-3
   computerChoice = playOptions[Math.floor(Math.random() * 3)]
   // return computer's choice
-  console.log(computerChoice);
   return computerChoice;
 }
 
@@ -30,32 +28,23 @@ function playersPlay() {
 
 }
 
-
-
 // Play round between computer and player
 function gameResults(computerChoice, playersChoice) {
   // take computerPlay and playersPlay
   let computer = computerChoice;
   let player = playersChoice;
-  console.log(`choice is ${computer}, ${player}`);
-  // let victor = ["computerWon", "playerWon", "tie"];
-  console.log(computer);
-  console.log(player);
 
   // Compare computerPlay and playersPlay
   if (computer === undefined || player === undefined) {
-    return result.innerHTML = " ";
+    return result.textContent = " ";
   } else if (computer === player) {
-    return result.innerHTML = "Its a tie!!";
-    // gameScore(victor[2]);
+    return result.textContent = "Its a tie!!";
 
   } else if (computer == "rock" && player == "scissors" || computer == "paper" && player == "rock" || computer == "scissors" && player == "paper") {
-    return result.innerHTML = `You lose! ${computer} beats ${player}.`;
-    // gameScore(victor[0]);
+    return result.textContent = `You lose! ${computer} beats ${player}.`;
 
   } else {
-    return result.innerHTML = `You win! ${player} beats ${computer}.`;
-    // gameScore(victor[1]);
+    return result.textContent = `You win! ${player} beats ${computer}.`;
   }
 }
 
