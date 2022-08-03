@@ -1,18 +1,25 @@
 h1 {
   text-align: center;
+  font-size: 10vw;
 }
 
 .scoreBoard {
   margin-top: 30px;
+  margin-bottom: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 4vw;
 }
 
 .score {
   padding: 20px;
   border: 1px solid lightslategray;
   border-radius: 5px;
+}
+
+h2 {
+  font-size: 6vw;
 }
 
 .buttonImages {
@@ -29,6 +36,6 @@ h1 {
 }
 
 button img {
-  max-width: 50%;
+  max-width: 70%;
   cursor: pointer;
 }
