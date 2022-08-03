@@ -67,12 +67,20 @@ function gameScore(computersPoint, playersPoint) {
     playersScore.textContent = 0;
     computersPoint = 0;
     computersScore.textContent = 0;
+
+    userChoiceDispay.textContent = "";
+    computerChoiceDisplay.textContent = "";
+    result.textContent = "";
   } else if (forPlayer === 5) {
     alert("Computer Won!!");
     playersPoint = 0;
     playersScore.textContent = 0;
     computersPoint = 0;
     computersScore.textContent = 0;
+
+    userChoiceDispay.textContent = "";
+    computerChoiceDisplay.textContent = "";
+    result.textContent = "";
   } else {
     null
   }
