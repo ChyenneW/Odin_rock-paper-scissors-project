@@ -20,10 +20,10 @@ function computerPlay() {
 function playersPlay() {
   possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
     playersChoice = e.target.id
-    userChoiceDispay.innerHTML = playersChoice;
+    userChoiceDispay.textContent = playersChoice;
     // Displays the results from computerPlay on the html
-    computerChoiceDisplay.innerHTML = computerPlay();
-    result.innerHTML = gameResults(computerChoice, playersChoice);
+    computerChoiceDisplay.textContent = computerPlay();
+    result.textContent = gameResults(computerChoice, playersChoice);
   }))
 
 }
