@@ -28,6 +28,9 @@ function playersPlay() {
 
 }
 
+let playersPoint = 0;
+let computersPoint = 0;
+
 // Play round between computer and player
 function gameResults(computerChoice, playersChoice) {
   // take computerPlay and playersPlay
@@ -39,12 +42,28 @@ function gameResults(computerChoice, playersChoice) {
     return result.textContent = " ";
   } else if (computer === player) {
     return result.textContent = "Its a tie!!";
-
   } else if (computer == "rock" && player == "scissors" || computer == "paper" && player == "rock" || computer == "scissors" && player == "paper") {
+    computersPoint++
+    console.log(computersPoint);
     return result.textContent = `You lose! ${computer} beats ${player}.`;
-
   } else {
+    playersPoint++
+    console.log(playersPoint);
     return result.textContent = `You win! ${player} beats ${computer}.`;
+  }
+}
+
+function gameScore() {
+  if (computersPoint === 5) {
+    alert("Computer Won!!");
+    playersPoint = 0;
+    computersPoint = 0;
+  } else if (playersPoint === 5) {
+    alert("Computer Won!!");
+    playersPoint = 0;
+    computersPoint = 0;
+  } else {
+    null
   }
 }
 
