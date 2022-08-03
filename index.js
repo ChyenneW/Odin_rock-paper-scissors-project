@@ -47,23 +47,32 @@ function gameResults(computerChoice, playersChoice) {
   } else if (computer == "rock" && player == "scissors" || computer == "paper" && player == "rock" || computer == "scissors" && player == "paper") {
     computersPoint++
     computersScore.textContent = computersPoint;
+    gameScore(computersPoint, playersPoint);
     return result.textContent = `You lose! ${computer} beats ${player}.`;
   } else {
     playersPoint++
     playersScore.textContent = playersPoint;
+    gameScore(computersPoint, playersPoint);
     return result.textContent = `You win! ${player} beats ${computer}.`;
   }
 }
 
-function gameScore() {
-  if (computersPoint === 5) {
+function gameScore(computersPoint, playersPoint) {
+  let forComputer = computersPoint;
+  let forPlayer = playersPoint;
+
+  if (forComputer === 5) {
     alert("Computer Won!!");
     playersPoint = 0;
+    playersScore.textContent = 0;
     computersPoint = 0;
-  } else if (playersPoint === 5) {
+    computersScore.textContent = 0;
+  } else if (forPlayer === 5) {
     alert("Computer Won!!");
     playersPoint = 0;
+    playersScore.textContent = 0;
     computersPoint = 0;
+    computersScore.textContent = 0;
   } else {
     null
   }
