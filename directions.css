@@ -3,27 +3,28 @@
   border-radius: 5px;
   padding: 20px;
   text-align: center;
+  font-size: 6vw;
   margin-top: 20px;
   margin-bottom: 30px;
 }
 
 h1 {
   text-align: center;
+  font-size: 12vw;
 }
 
 ul {
   list-style: none;
   padding-left: 0;
-  text-align: center;
-  font-size: 30px;
+  font-size: 8vw;
 }
 
 li {
   display: inline-flex;
   align-items: center;
-  gap: 15px;
+  justify-content: space-evenly;
 }
 
 img {
-  max-width: 90px;
+  max-width: 20%;
 }
