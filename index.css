@@ -5,3 +5,20 @@
   justify-content: center;
   align-items: center;
 }
+
+.buttonImages {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonImages button {
+  border: none;
+  background-color: white;
+}
+
+button img {
+  max-width: 50%;
+  cursor: pointer;
+}
