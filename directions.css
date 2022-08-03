@@ -4,8 +4,10 @@
   padding: 20px;
   text-align: center;
   font-size: 6vw;
+  margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 30px;
+  max-width: 80%;
 }
 
 h1 {
@@ -13,10 +15,17 @@ h1 {
   font-size: 12vw;
 }
 
+.directions {
+  margin: 0 auto;
+  max-width: 70%;
+}
+
 ul {
   list-style: none;
   padding-left: 0;
   font-size: 8vw;
+  margin: 0 auto;
+  max-width: 60%;
 }
 
 li {
@@ -27,4 +36,18 @@ li {
 
 img {
   max-width: 20%;
+}
+
+@media screen and (min-width: 1000px) {
+  .section {
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 100px;
+  }
+
+  ul {
+    font-size: 55px;
+  }
 }
