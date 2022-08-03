@@ -19,7 +19,7 @@ function computerPlay() {
 
 function playersPlay() {
   possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
-    playersChoice = e.target.id
+    playersChoice = e.target.alt;
     userChoiceDispay.textContent = playersChoice;
     // Displays the results from computerPlay on the html
     computerChoiceDisplay.textContent = computerPlay();
